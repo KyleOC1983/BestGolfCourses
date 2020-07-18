@@ -63,6 +63,19 @@
             <img mat-card-image src="https://golfcoursegurus.com/photos/colorado/fossiltrace/large/Fossil-Trace-12th-bunker-zoom.jpg">
           </mat-card>
 
+          <div *ngIf="">
+          <ng-container *ngFor c of course></ng-container>
+          <mat-card class="example-card">
+            <mat-card-header>
+               
+              <div mat-card-avatar class="example-header-image" ><mat-icon>golf_course</mat-icon> </div>
+              <mat-card-title>{{c.course}}</mat-card-title>
+              
+            </mat-card-header>
+            <img mat-card-image src="{{c.imgUrl}}">
+          </mat-card>
+        </ng-container>
+      </div>
           
 </div>
 
