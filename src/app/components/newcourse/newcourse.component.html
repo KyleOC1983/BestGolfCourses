@@ -1,0 +1,13 @@
+<div class="example-container">
+    <mat-form-field appearance="fill">
+      <mat-label>Title</mat-label>
+      <input matInput #title>
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+      <mat-label>Image URL</mat-label>
+      <textarea matInput #content></textarea>
+    </mat-form-field>
+    <br>
+    <button mat-raised-button (click)="addNewCourse(title.value, imgUrl.value)" color='primary'>Submit New Course</button>
+</div>

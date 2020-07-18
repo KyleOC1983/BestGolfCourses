@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "bestgolfcourse-69892": {
+      "hosting": {
+        "bestgolfcourse": [
+          "bestgolfcourse-69892"
+        ]
+      }
+    }
+  }
+}
