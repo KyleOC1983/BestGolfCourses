@@ -9,12 +9,14 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
 import { BestcoursesComponent } from './components/bestcourses/bestcourses.component';
+import { NewcourseComponent } from './components/newcourse/newcourse.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    BestcoursesComponent
+    BestcoursesComponent,
+    NewcourseComponent
   ],
   imports: [
     BrowserModule,

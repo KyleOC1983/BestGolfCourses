@@ -12,7 +12,7 @@ export class NewcourseComponent implements OnInit {
   constructor(private newCourseService: NewcourseService) { }
 
   course: any;
-
+  
   addNewCourse(title: string, imgUrl: string){
     this.newCourseService.addCourse(title, imgUrl)
   }
