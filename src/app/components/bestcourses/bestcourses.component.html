@@ -63,7 +63,7 @@
             <img mat-card-image src="https://golfcoursegurus.com/photos/colorado/fossiltrace/large/Fossil-Trace-12th-bunker-zoom.jpg">
           </mat-card>
 
-          <div *ngIf="course">
+          <div *ngIf="newCourse">
           <ng-container *ngFor let c of course>
           <mat-card class="example-card">
             <mat-card-header>
@@ -72,10 +72,10 @@
               <mat-card-title>{{c.course}}</mat-card-title>
               
             </mat-card-header>
-            <img mat-card-image [src]="{{c.imgUrl}}">
+            <img ng-src="{{c.imgUrl}}">
           </mat-card>
-        </div>
+        
     </ng-container>
-          
+      </div>
 </div>
 

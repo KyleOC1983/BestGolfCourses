@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NewcourseService } from 'src/app/services/newcourse.service';
 
 
 @Component({
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BestcoursesComponent implements OnInit {
 
-  constructor() { }
+  constructor(private newCourse: NewcourseService) { }
 
   ngOnInit(): void {
   }
