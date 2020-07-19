@@ -20,5 +20,12 @@ export class NewcourseService {
     })
   }
 
+  removeCourse(course: string){
+    this.firestore.collection('course').delete({
+      course: course,
+      imgUrl: imgUrl,
+    })
+  }
+
 
 }
