@@ -1,21 +1,30 @@
-.example-card{ 
-    flex: 0 1 28%;
-    margin: 10px 10px;
+body{
+    background-color: darkgray;
+    height: 500px;
 }
 
-.example-container{
+.example-card{ 
+    flex: 0 1 28%;
+    width: 100%;
+    padding: 25px 25px;  
+}
+
+.bgDarkGray{
     background-color: darkgray;
+}
+
+.marginAuto{
+    margin:auto;
 }
 
 .center{
     text-align: center;
-    margin-top: auto;
     padding-top: 25px;
 }
   
 .parentContainer {
-    display: flex;
-    flex-flow: row wrap;
-   justify-content: space-between;
+   display: flex;
+   flex-flow: row wrap;
+   justify-content: center;
    background-color: darkgray;
 }

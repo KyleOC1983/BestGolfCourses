@@ -1,13 +1,15 @@
 <mat-toolbar color="primary">
   <mat-toolbar-row>
     <span>Best Golf Courses</span>
+    <mat-icon class="example-icon hover rightSide" aria-hidden="false" aria-label="Example user verified icon">face</mat-icon>
   </mat-toolbar-row>
 </mat-toolbar>
 <mat-toolbar color="accent">
   <mat-toolbar-row>
     <span>(according to me)</span>
     <span class="example-spacer"></span>
-    <mat-icon class="example-icon" aria-hidden="false" aria-label="Example user verified icon">sports_golf</mat-icon>
+    <mat-icon class="example-icon hover" aria-hidden="false" aria-label="Example user verified icon" [routerLink]="['/bestcourses']">sports_golf</mat-icon>
+    <mat-icon class="example-icon hover" aria-hidden="false" aria-label="Example user verified icon" [routerLink]="['/newcourse']">add_circle</mat-icon>
   </mat-toolbar-row>
 </mat-toolbar>
 
