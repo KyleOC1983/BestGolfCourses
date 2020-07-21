@@ -1,4 +1,4 @@
-<div class="example-container">
+<div class="example-container center">
     <mat-form-field appearance="fill">
       <mat-label>Course</mat-label>
       <input matInput #course>
@@ -10,4 +10,18 @@
     </mat-form-field>
     <br>
     <button mat-raised-button (click)="addNewCourse(course.value, imgUrl.value)" color='primary'>Submit New Course</button>
+</div>
+
+<div *ngIf="course.value && imgUrl.value" class="parent-container">
+  
+  <mat-card class="example-card">
+    <mat-card-header>
+       
+      <div mat-card-avatar class="example-header-image" ><mat-icon>golf_course</mat-icon> </div>
+      <mat-card-title>{{course.value}}</mat-card-title>
+      
+    </mat-card-header>
+    <img mat-card-image [src]="imgUrl.value">
+  </mat-card>
+
 </div>

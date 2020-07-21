@@ -14,9 +14,12 @@ export class NewcourseComponent implements OnInit {
 
   provider = new firebase.auth.GoogleAuthProvider();
   course: any;
+  newCourse: boolean = false;
   
   addNewCourse(title: string, imgUrl: string){
+    this.newCourse = true;
     this.newCourseService.addCourse(title, imgUrl)
+    
   }
 
   ngOnInit(): void {
