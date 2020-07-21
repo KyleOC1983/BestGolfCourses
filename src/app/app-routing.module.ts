@@ -5,8 +5,8 @@ import { NewcourseComponent } from './components/newcourse/newcourse.component';
 
 
 const routes: Routes = [
-  {path: '/bestcourses', component: BestcoursesComponent},
-  {path: '/newcourse', component: NewcourseComponent},
+  {path: 'bestcourses', component: BestcoursesComponent},
+  {path: 'newcourse', component: NewcourseComponent},
   {path: '**', redirectTo: '/bestcourses'},
 ];
 

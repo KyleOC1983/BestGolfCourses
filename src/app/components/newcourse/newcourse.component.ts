@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NewcourseService } from 'src/app/services/newcourse.service';
+import * as firebase from 'firebase';
 
 
 @Component({
@@ -11,6 +12,7 @@ export class NewcourseComponent implements OnInit {
 
   constructor(private newCourseService: NewcourseService) { }
 
+  provider = new firebase.auth.GoogleAuthProvider();
   course: any;
   
   addNewCourse(title: string, imgUrl: string){

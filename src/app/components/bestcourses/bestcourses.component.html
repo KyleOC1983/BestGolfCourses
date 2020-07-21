@@ -6,7 +6,7 @@
       <mat-card-title>Torrey Pines</mat-card-title>
       
     </mat-card-header>
-    <img mat-card-image src="https://lh3.googleusercontent.com/proxy/HxGJAMP_9XzSNPzeEkdXrLucBav0rYuk3rUVNyCXXtwiceU2u0-oP_nK7ozIgNur54qbFJmgVaOCNROVesKhU3ftxAhzqBEOT6FQrbJm6mpk2-ozGkdYXEjVBBR97cnQX06OegvmK4UNRWqLa2pri8cwRLPXTTlI0L_9" alt="Photo of Torrey Pines">
+    <img mat-card-image src="https://www.sandiego.gov/sites/default/files/styles/100_percent/public/hole_no._4_aerial.jpg?itok=zjIE3zVz">
   </mat-card>
 
 
@@ -63,19 +63,19 @@
             <img mat-card-image src="https://golfcoursegurus.com/photos/colorado/fossiltrace/large/Fossil-Trace-12th-bunker-zoom.jpg">
           </mat-card>
 
-          <div *ngIf="newCourse">
-          <ng-container *ngFor let c of course>
-          <mat-card class="example-card">
-            <mat-card-header>
-               
-              <div mat-card-avatar class="example-header-image" ><mat-icon>golf_course</mat-icon> </div>
-              <mat-card-title>{{c.course}}</mat-card-title>
+        <div *ngIf="newCourse">
+         <ng-container *ngFor = "let c of course">
+         <mat-card class="example-card">
+           <mat-card-header>
               
-            </mat-card-header>
-            <img ng-src="{{c.imgUrl}}">
-          </mat-card>
-        
-    </ng-container>
-      </div>
+             <div mat-card-avatar class="example-header-image" ><mat-icon>golf_course</mat-icon> </div>
+             <mat-card-title>{{c.course}}</mat-card-title>
+             
+           </mat-card-header>
+           <img mat-card-image [src]="c.imgUrl">
+         </mat-card>
+       
+   </ng-container>
+     </div>
 </div>
 
