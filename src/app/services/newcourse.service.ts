@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
+import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -26,8 +27,9 @@ export class NewcourseService {
     })
   }
 
-  removeCourse(course: string, imgUrl: string){
-    this.firestore.collection('course').doc('course, imgUrl').delete().then(function() {
+  removeCourse(id: string){
+    console.log(id);
+    this.firestore.collection('course').doc(id).delete().then(function() {
       console.log("Document successfully deleted!");
     })
   }
