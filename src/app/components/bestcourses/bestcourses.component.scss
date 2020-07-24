@@ -6,7 +6,7 @@
 .parentContainer {
     display: flex;
     flex-flow: row wrap;
-   justify-content: space-between;
+   justify-content: center;
    background-color: darkgray;
 }
 
@@ -19,7 +19,7 @@
 
 @media screen and (max-width: 560px) {
   .example-card {
-    flex: 0 1 90%;
+    flex: 0 1 85%;
     margin: 10px 10px;
   }
 }
