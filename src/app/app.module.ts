@@ -7,7 +7,7 @@ import { environment } from '../environments/environment';
 import { AngularFireAnalyticsModule } from '@angular/fire/analytics';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MaterialModule } from './material.module';
+import { MaterialModule } from './materialModule';
 import { BestcoursesComponent } from './components/bestcourses/bestcourses.component';
 import { NewcourseComponent } from './components/newcourse/newcourse.component';
 import { Course } from './interfaces/courses.interface';
