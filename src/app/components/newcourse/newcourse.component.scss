@@ -1,20 +1,14 @@
 body{
     background-color: darkgray;
-    height: 497px;
 }
 
 .example-card{ 
-    flex: 0 1 28%;
-    width: 100%;
+    flex: 0 1 55%;
     padding: 25px 25px;  
 }
 
 .bgDarkGray{
     background-color: darkgray;
-}
-
-.marginAuto{
-    margin:auto;
 }
 
 .center{
@@ -28,3 +22,18 @@ body{
    justify-content: center;
    background-color: darkgray;
 }
+
+@media screen and (max-width: 975px) {
+    .example-card {
+      flex: 0 1 65%;
+      margin: 10px 10px;
+    }
+  }
+  
+  @media screen and (max-width: 560px) {
+    .example-card {
+      flex: 0 1 85%;
+      margin: 10px 10px;
+    }
+  }
+  
