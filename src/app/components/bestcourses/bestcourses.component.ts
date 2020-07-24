@@ -15,7 +15,7 @@ export class BestcoursesComponent implements OnInit {
 
   course: Observable<any[]>;
 
-  constructor(private newCourseService: NewcourseService, private firestore: AngularFirestore) { 
+  constructor(private newCourseService: NewcourseService, private firestore: AngularFirestore,) { 
     this.course = firestore.collection('course').valueChanges();
   }
   
@@ -26,6 +26,10 @@ export class BestcoursesComponent implements OnInit {
 
   addNewCourse(course: string, imgUrl: string){
     this.newCourseService.addCourse(course, imgUrl);
+  }
+
+  deleteCourse(course: string, imgUrl: string){
+    this.newCourseService.removeCourse(course, imgUrl);
   }
 
   ngOnInit(): void {

@@ -18,8 +18,7 @@ export class NewcourseComponent implements OnInit {
   
   addNewCourse(title: string, imgUrl: string){
     this.newCourse = true;
-    this.newCourseService.addCourse(title, imgUrl)
-    
+    this.newCourseService.addCourse(title, imgUrl);
   }
 
   ngOnInit(): void {

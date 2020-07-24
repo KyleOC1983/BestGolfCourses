@@ -9,7 +9,7 @@ const redirectUnauthorizedToBestCourses = () => redirectUnauthorizedTo(['bestcou
 
 const routes: Routes = [
   {path: 'bestcourses', component: BestcoursesComponent},
-  {path: 'newcourse', component: NewcourseComponent, canActivate: [AngularFireAuthGuard], data: {authGuardPipe: redirectUnauthorizedToBestCourses}},
+  {path: 'newcourse', component: NewcourseComponent, canActivate: [AngularFireAuthGuard], data: {authGuardPipe: redirectUnauthorizedTo}},
   {path: '**', redirectTo: '/bestcourses'},
 ];
 

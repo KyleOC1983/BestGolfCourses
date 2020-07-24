@@ -24,7 +24,6 @@ export class NewcourseService {
       course: course,
       imgUrl: imgUrl,
     })
-    console.log(course, imgUrl);
   }
 
   removeCourse(course: string, imgUrl: string){
