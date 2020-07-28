@@ -5,6 +5,7 @@ import * as firebase from 'firebase';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { Router } from '@angular/router';
 import { auth } from 'firebase';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 
 @Component({
@@ -13,11 +14,13 @@ import { auth } from 'firebase';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'bestgolfcourse';
-  items: Observable<any[]>;
+  
+  
+  
+  
 
-  constructor(firestore: AngularFirestore, public auth: AngularFireAuth, private router: Router) {
-    this.items = firestore.collection('items').valueChanges();
+  constructor(public auth: AngularFireAuth, private router: Router, private _snackBar: MatSnackBar) {
+    
   }
   //firebase Login
   login(){
@@ -26,5 +29,9 @@ export class AppComponent {
   //firebase logout
   logout(){
     this.auth.signOut();
+    this._snackBar.open("Successfully Logged Out", '',{
+      duration: 2000,
+    })
   }
+
 }
