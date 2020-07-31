@@ -4,6 +4,7 @@ import { NewcourseComponent } from '../newcourse/newcourse.component';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 import { firestore } from 'firebase';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 
 @Component({
@@ -15,7 +16,7 @@ export class BestcoursesComponent implements OnInit {
 
   course: Observable<any[]>;
 
-  constructor(private newCourseService: NewcourseService, private firestore: AngularFirestore,) { 
+  constructor(private newCourseService: NewcourseService, private firestore: AngularFirestore, private _snackBar: MatSnackBar) { 
     this.course = firestore.collection('course').valueChanges({ idField: 'id' });
   }
 
@@ -23,6 +24,9 @@ export class BestcoursesComponent implements OnInit {
   deleteCourse(id: string){
     console.log(id);
     this.newCourseService.removeCourse(id);
+    this._snackBar.open("Yeah, that course stinks.  It's been removed.", '',{
+      duration: 2000,
+    })
   }
 
   

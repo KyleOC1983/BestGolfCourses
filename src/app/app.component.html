@@ -10,8 +10,8 @@
   <mat-toolbar-row>
     <span>(according to me)</span>
     <span class="example-spacer"></span>
-    <mat-icon class="example-icon hover" aria-hidden="false" aria-label="Example user verified icon" [routerLink]="['/bestcourses']">sports_golf</mat-icon>
-    <mat-icon class="example-icon hover" aria-hidden="false" aria-label="Example user verified icon" [routerLink]="['/newcourse']">add_circle</mat-icon>
+    <mat-icon class="example-icon hover" aria-hidden="true"  aria-label="Example user verified icon" [routerLink]="['/bestcourses']">sports_golf</mat-icon>
+    <mat-icon class="example-icon hover" aria-hidden="false" aria-label="Example user verified icon" (click)="moveToNewCourses()">add_circle</mat-icon>
   </mat-toolbar-row>
 </mat-toolbar>
 
